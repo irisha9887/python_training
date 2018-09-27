@@ -9,7 +9,7 @@ import unittest, time, re
 
 class TestAddGroup(unittest.TestCase):
     def setUp(self):
-        self.wd = webdriver.Firefox()
+        self.wd = webdriver.Firefox
         self.wd.implicitly_wait(30)
 
     

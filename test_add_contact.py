@@ -13,7 +13,8 @@ class TestAddContact(unittest.TestCase):
         self.base_url = "https://www.katalon.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
-    
+
+
     def test_add_contact(self):
         driver = self.driver
         self.open_home_page(driver)
@@ -24,6 +25,20 @@ class TestAddContact(unittest.TestCase):
                                             homepage = "Test homepage", bday = "12", bmonth = "May", byear = "1990", aday = "17", amonth = "June", ayear = "1995",
                                             address2 = "10 Main str, 8 apr, Fremont", phone2 = "987654321", notes = "Have a good day! Well done!" ))
         self.logout(driver)
+
+
+
+    def test_add_empty_contact(self):
+        driver = self.driver
+        self.open_home_page(driver)
+        self.login(driver, login = "admin",  password = "secret")
+        self.create_contact(driver, Contact(firstname = "", middlename = "", lastname = "", nickname = "", photo = "/Users/i.mamutkina/Desktop/photo.png",
+                                            title = "", company = "", address = "", home = "", mobile = "", work = "",
+                                            fax = "", email = "", email2 = "", email3 = "",
+                                            homepage = "", bday = "", bmonth = "May", byear = "", aday = "", amonth = "June", ayear = "",
+                                            address2 = "", phone2 = "", notes = "" ))
+        self.logout(driver)
+
 
     def logout(self, driver):
         driver.find_element_by_link_text("Logout").click()

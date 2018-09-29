@@ -8,42 +8,42 @@ from contact import Contact
 
 class TestAddContact(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
+        self.wd = webdriver.Firefox()
+        self.wd.implicitly_wait(30)
         self.base_url = "https://www.katalon.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
 
 
     def test_add_contact(self):
-        driver = self.driver
-        self.open_home_page(driver)
-        self.login(driver, login = "admin",  password = "secret")
-        self.create_contact(driver, Contact(firstname = "Kate", middlename = "K.Smith", lastname = "Smith", nickname = "Katty", photo = "/Users/i.mamutkina/Desktop/photo.png",
+        self.open_home_page()
+        self.login(login = "admin",  password = "secret")
+        self.create_contact(Contact(firstname = "Kate", middlename = "K.Smith", lastname = "Smith", nickname = "Katty", photo = "/Users/i.mamutkina/Desktop/photo.png",
                                             title = "Dev", company = "Google", address = "12 Main str, 5 apr, Menlo park", home = "123456789", mobile = "123456788", work = "12346777",
                                             fax = "fax-123-456-789", email = "kate1@gmail.com", email2 = "kate2@gmail.com", email3 = "kate3@gmail.com",
                                             homepage = "Test homepage", bday = "12", bmonth = "May", byear = "1990", aday = "17", amonth = "June", ayear = "1995",
                                             address2 = "10 Main str, 8 apr, Fremont", phone2 = "987654321", notes = "Have a good day! Well done!" ))
-        self.logout(driver)
+        self.logout()
 
 
 
     def test_add_empty_contact(self):
-        driver = self.driver
-        self.open_home_page(driver)
-        self.login(driver, login = "admin",  password = "secret")
-        self.create_contact(driver, Contact(firstname = "", middlename = "", lastname = "", nickname = "", photo = "/Users/i.mamutkina/Desktop/photo.png",
+        self.open_home_page()
+        self.login(login = "admin",  password = "secret")
+        self.create_contact(Contact(firstname = "", middlename = "", lastname = "", nickname = "", photo = "/Users/i.mamutkina/Desktop/photo.png",
                                             title = "", company = "", address = "", home = "", mobile = "", work = "",
                                             fax = "", email = "", email2 = "", email3 = "",
                                             homepage = "", bday = "", bmonth = "May", byear = "", aday = "", amonth = "June", ayear = "",
                                             address2 = "", phone2 = "", notes = "" ))
-        self.logout(driver)
+        self.logout()
 
 
-    def logout(self, driver):
-        driver.find_element_by_link_text("Logout").click()
+    def logout(self):
+        wd = self.wd
+        wd.find_element_by_link_text("Logout").click()
 
-    def create_contact(self, wd, contact):
+    def create_contact(self, contact):
+        wd = self.wd
         # Create contact and fill all fields
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -125,34 +125,36 @@ class TestAddContact(unittest.TestCase):
         wd.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Notes:'])[1]/following::input[1]").click()
 
-    def login(self, driver, login, password):
+    def login(self, login, password):
         # Login
-        driver.find_element_by_name("user").click()
-        driver.find_element_by_name("user").clear()
-        driver.find_element_by_name("user").send_keys(login)
-        driver.find_element_by_id("LoginForm").click()
-        driver.find_element_by_name("pass").click()
-        driver.find_element_by_name("pass").clear()
-        driver.find_element_by_name("pass").send_keys(password)
-        driver.find_element_by_xpath(
+        wd = self.wd
+        wd.find_element_by_name("user").click()
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys(login)
+        wd.find_element_by_id("LoginForm").click()
+        wd.find_element_by_name("pass").click()
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys(password)
+        wd.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]").click()
 
-    def open_home_page(self, driver):
-        driver.get("http://localhost/addressbook/edit.php")
+    def open_home_page(self):
+        wd = self.wd
+        wd.get("http://localhost/addressbook/edit.php")
 
     def is_element_present(self, how, what):
-        try: self.driver.find_element(by=how, value=what)
+        try: self.wd.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
         return True
     
     def is_alert_present(self):
-        try: self.driver.switch_to_alert()
+        try: self.wd.switch_to_alert()
         except NoAlertPresentException as e: return False
         return True
     
     def close_alert_and_get_its_text(self):
         try:
-            alert = self.driver.switch_to_alert()
+            alert = self.wd.switch_to_alert()
             alert_text = alert.text
             if self.accept_next_alert:
                 alert.accept()
@@ -162,7 +164,7 @@ class TestAddContact(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        self.wd.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

@@ -13,16 +13,16 @@ def app(request):
 
 def test_add_group(app):
     app.open_home_page()
-    app.login(login="admin", password="secret")
+    app.sessoin.login(login="admin", password="secret")
     app.create_group(Group(name="New group", header="Header", footer="Footer"))
-    app.logout()
+    app.sessoin.logout()
 
 
 def test_add_empty_group(app):
     app.open_home_page()
-    app.login(login="admin", password="secret")
+    app.sessoin.login(login="admin", password="secret")
     app.create_group(Group(name="", header="", footer=""))
-    app.logout()
+    app.sessoin.logout()
 
 
 

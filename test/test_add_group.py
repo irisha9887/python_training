@@ -12,16 +12,16 @@ def app(request):
 
 
 def test_add_group(app):
-    app.open_home_page()
+    app.navigation.open_home_page()
     app.sessoin.login(login="admin", password="secret")
-    app.create_group(Group(name="New group", header="Header", footer="Footer"))
+    app.group.create(Group(name="New group", header="Header", footer="Footer"))
     app.sessoin.logout()
 
 
 def test_add_empty_group(app):
-    app.open_home_page()
+    app.navigation.open_home_page()
     app.sessoin.login(login="admin", password="secret")
-    app.create_group(Group(name="", header="", footer=""))
+    app.group.create(Group(name="", header="", footer=""))
     app.sessoin.logout()
 
 

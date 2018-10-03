@@ -12,8 +12,9 @@ def app(request):
 
 
 def test_add_contact(app):
-    app.navigation.open_edit_page()
+    app.navigation.open_home_page()
     app.sessoin.login(login="admin", password="secret")
+    app.navigation.open_edit_page()
     app.contact.create(Contact(firstname="Kate", middlename="K.Smith", lastname="Smith", nickname="Katty", photo="/Users/i.mamutkina/Desktop/photo.png", title="Dev",
                                company="Google", address="12 Main str, 5 apr, Menlo park", home="123456789", mobile="123456788", work="12346777",
                                fax="fax-123-456-789", email="kate1@gmail.com", email2="kate2@gmail.com", email3="kate3@gmail.com", homepage="Test homepage",
@@ -23,8 +24,9 @@ def test_add_contact(app):
 
 
 def test_add_empty_contact(app):
-    app.navigation.open_edit_page()
+    app.navigation.open_home_page()
     app.sessoin.login(login="admin",  password="secret")
+    app.navigation.open_edit_page()
     app.contact.create(Contact(firstname="", middlename="", lastname="", nickname="", photo="/Users/i.mamutkina/Desktop/photo.png", title="", company="", address="",
                                home="", mobile="", work="", fax="", email="", email2="", email3="", homepage="", bday="", bmonth="May", byear="", aday="",
                                amonth="June", ayear="", address2="", phone2="", notes=""))

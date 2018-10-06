@@ -11,7 +11,7 @@ class Application:
         self.base_url = "https://www.katalon.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
-        self.sessoin = SessionHelper(self)
+        self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.navigation = NavigationHelper(self)
         self.contact = ContactHelper(self)

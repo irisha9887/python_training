@@ -5,7 +5,7 @@ from fixture.application import Application
 def app(request):
     fixture = Application()
     fixture.navigation.open_home_page()
-    fixture.sessoin.login(login="admin", password="secret")
+    fixture.session.login(login="admin", password="secret")
     def fin():
         fixture.session.logout()
         fixture.destroy()

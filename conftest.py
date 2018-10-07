@@ -1,11 +1,25 @@
 import pytest
 from fixture.application import Application
 
-@pytest.fixture(scope = "session")
+fixture =  None
+
+@pytest.fixture
 def app(request):
-    fixture = Application()
-    fixture.navigation.open_home_page()
-    fixture.session.login(login="admin", password="secret")
+    global fixture
+    if fixture is None:
+        fixture = Application()
+        fixture.navigation.open_home_page()
+        fixture.session.login(login="admin", password="secret")
+    else:
+        if not fixture.is_valid():
+            fixture = Application()
+            fixture.navigation.open_home_page()
+            fixture.session.login(login="admin", password="secret")
+    return fixture
+
+
+@pytest.fixture(scope="session", autouse=True)
+def stop(request):
     def fin():
         fixture.session.logout()
         fixture.destroy()

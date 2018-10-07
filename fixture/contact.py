@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import Select
+#from fixture.navigation import NavigationHelper
 
 class ContactHelper:
 
@@ -83,7 +84,6 @@ class ContactHelper:
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
         wd.find_element_by_xpath("//input[21]").click()
-
 
     def modify_first_contact(self, contact):
         wd = self.app.wd
@@ -174,5 +174,9 @@ class ContactHelper:
         # Submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+
+    def count(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_name("selected[]"))
 
 

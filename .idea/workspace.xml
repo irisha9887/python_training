@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5418f789-2b0b-46bd-87d3-403bc8328e58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,18 +15,18 @@
     <session id="-1181697081">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,7 +34,7 @@
           <entry key="log" value="1" />
           <entry key="md" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="105" />
+          <entry key="py" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -44,22 +42,22 @@
           <entry key="Image" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="105" />
+          <entry key="Python" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
           <entry key="md" value="38" />
-          <entry key="py" value="5478" />
-          <entry key="txt" value="772" />
+          <entry key="py" value="5554" />
+          <entry key="txt" value="808" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="38" />
-          <entry key="PLAIN_TEXT" value="778" />
-          <entry key="Python" value="5478" />
+          <entry key="PLAIN_TEXT" value="814" />
+          <entry key="Python" value="5554" />
         </counts>
       </usages-collector>
     </session>
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="9" />
               <folding>
                 <marker date="1538974018255" expanded="true" signature="1473:1980" ph="..." />
                 <marker date="1538974018255" expanded="true" signature="1858:1980" ph="..." />
@@ -80,10 +78,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/contact.py">
+        <entry file="file://$PROJECT_DIR$/fixture/navigation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="165">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -91,10 +98,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1354">
-              <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
+            <state relative-caret-position="545">
+              <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
               <folding>
-                <marker date="1538942608451" expanded="true" signature="9407:9416" ph="..." />
+                <marker date="1539141339859" expanded="true" signature="5600:5609" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
+            <state relative-caret-position="75">
               <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -139,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_modify_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="135">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
@@ -174,26 +181,26 @@
         <option value="$PROJECT_DIR$/test/conftest.py" />
         <option value="$PROJECT_DIR$/test/test_del_contat.py" />
         <option value="$PROJECT_DIR$/model/group.py" />
-        <option value="$PROJECT_DIR$/fixture/navigation.py" />
         <option value="$PROJECT_DIR$/test/test_add_contact.py" />
         <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/test/test_del_group.py" />
         <option value="$PROJECT_DIR$/test/test_modify_group.py" />
-        <option value="$PROJECT_DIR$/fixture/contact.py" />
         <option value="$PROJECT_DIR$/test/test_del_contact.py" />
-        <option value="$PROJECT_DIR$/test/test_modify_contact.py" />
         <option value="$PROJECT_DIR$/fixture/group.py" />
         <option value="$PROJECT_DIR$/fixture/session.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
+        <option value="$PROJECT_DIR$/test/test_modify_contact.py" />
+        <option value="$PROJECT_DIR$/fixture/navigation.py" />
+        <option value="$PROJECT_DIR$/fixture/contact.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="29" />
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="701" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-1920" />
+    <option name="y" value="-185" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -203,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +241,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +307,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_del_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -311,7 +318,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_del_group.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_contact.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -348,17 +355,17 @@
     <list>
       <item itemvalue="Python tests.pytest in test" />
       <item itemvalue="Python tests.pytest in test_modify_contact.py" />
-      <item itemvalue="Python tests.pytest in test_del_group.py" />
       <item itemvalue="Python tests.pytest in test_modify_group.py" />
       <item itemvalue="Python.application" />
+      <item itemvalue="Python tests.pytest in test_add_contact.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test" />
+        <item itemvalue="Python tests.pytest in test_modify_contact.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python.application" />
         <item itemvalue="Python tests.pytest in test_modify_group.py" />
-        <item itemvalue="Python tests.pytest in test_del_group.py" />
-        <item itemvalue="Python tests.pytest in test_modify_contact.py" />
       </list>
     </recent_temporary>
   </component>
@@ -590,38 +597,45 @@
       <option name="project" value="LOCAL" />
       <updated>1538947827152</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Some methods were modified (task 10)">
+      <created>1538978582156</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1538978582156</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test - 2018.10.07 at 21h 49m 53s.xml">
+    <history-entry file="pytest_in_test - 2018.10.08 at 22h 35m 24s.xml">
       <configuration name="pytest in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 21h 51m 34s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 22h 40m 44s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 21h 52m 08s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 22h 45m 18s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 21h 52m 36s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 21h 52m 59s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 22h 04m 32s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 22h 04m 55s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_modify_group_py - 2018.10.07 at 22h 13m 26s.xml">
-      <configuration name="pytest in test_modify_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test - 2018.10.07 at 22h 15m 01s.xml">
+    <history-entry file="pytest_in_test - 2018.10.08 at 22h 47m 52s.xml">
       <configuration name="pytest in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test - 2018.10.07 at 22h 16m 47s.xml">
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 22h 53m 06s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact_py - 2018.10.08 at 22h 55m 59s.xml">
+      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 22h 56m 18s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 23h 04m 08s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_modify_contact_py - 2018.10.08 at 23h 04m 49s.xml">
+      <configuration name="pytest in test_modify_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test - 2018.10.09 at 19h 55m 37s.xml">
       <configuration name="pytest in test" configurationId="tests" />
     </history-entry>
   </component>
@@ -635,15 +649,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1280" height="701" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1920" y="-185" width="1920" height="1200" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24394184" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16347177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881662" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.52901024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28003612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -720,7 +733,8 @@
     <MESSAGE value="Fixture construction was changed" />
     <MESSAGE value="Login and logout methods were modified" />
     <MESSAGE value="All test were modified, they check that one group/contact exist for deleting or modifying" />
-    <option name="LAST_COMMIT_MESSAGE" value="All test were modified, they check that one group/contact exist for deleting or modifying" />
+    <MESSAGE value="Some methods were modified (task 10)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some methods were modified (task 10)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -776,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_del_contact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -804,10 +811,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/navigation.py">
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="6" selection-end-column="22" />
+        <state relative-caret-position="75">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1538977477799" expanded="true" signature="221:226" ph="..." />
+            <marker date="1538977477799" expanded="true" signature="608:724" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,31 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_modify_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1538977477799" expanded="true" signature="221:226" ph="..." />
-            <marker date="1538977477799" expanded="true" signature="608:724" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding>
-            <marker date="1538974018255" expanded="true" signature="1473:1980" ph="..." />
-            <marker date="1538974018255" expanded="true" signature="1858:1980" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,12 +855,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="9" />
+          <folding>
+            <marker date="1538974018255" expanded="true" signature="1473:1980" ph="..." />
+            <marker date="1538974018255" expanded="true" signature="1858:1980" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/navigation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1354">
-          <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
+        <state relative-caret-position="545">
+          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
           <folding>
-            <marker date="1538942608451" expanded="true" signature="9407:9416" ph="..." />
+            <marker date="1539141339859" expanded="true" signature="5600:5609" ph="..." />
           </folding>
         </state>
       </provider>

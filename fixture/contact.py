@@ -99,7 +99,7 @@ class ContactHelper:
         wd.find_element_by_name("selected[]").click()
         # Edit contact
         #wd.find_element_by_xpath("//img[@alt='Edit']").click()
-        wd.find_elements_by_css_selector("img.Edit")[id].click()
+        wd.find_elements_by_css_selector("img[alt='Edit']")[0].click()
         # Fill contact form with new values
         self.fill_primary_fields_for_contact(contact)
         self.fill_secondary_fields_for_contact(contact)

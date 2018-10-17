@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import Select
+from fixture.navigation import NavigationHelper
 
 class ContactHelper:
 
@@ -114,5 +115,16 @@ class ContactHelper:
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        NavigationHelper.open_home_page()
+        contacts = []
+        cell_list = wd.element.find_elements_by_tag_name("td")
+        for element in cell_list:
+            text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            contacts.append(Contact(name=text, id=id))
+        return contacts
 
 

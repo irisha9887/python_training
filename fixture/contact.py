@@ -1,5 +1,5 @@
 from selenium.webdriver.support.ui import Select
-from fixture.navigation import NavigationHelper
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -98,7 +98,8 @@ class ContactHelper:
         # Select first contact
         wd.find_element_by_name("selected[]").click()
         # Edit contact
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        #wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_element_by_css_selector("img.Edit")[0].click()
         # Fill contact form with new values
         self.fill_primary_fields_for_contact(contact)
         self.fill_secondary_fields_for_contact(contact)
@@ -118,13 +119,16 @@ class ContactHelper:
 
     def get_contact_list(self):
         wd = self.app.wd
-        NavigationHelper.open_home_page()
+        self.app.navigation.open_home_page()
         contacts = []
-        cell_list = wd.element.find_elements_by_tag_name("td")
-        for element in cell_list:
-            text = element.text
+        for element in wd.find_elements_by_name("entry"):
+            cell_list = element.find_elements_by_tag_name("td")
+            last_name = cell_list[1].text
+            first_name = cell_list[2].text
             id = element.find_element_by_name("selected[]").get_attribute("value")
-            contacts.append(Contact(name=text, id=id))
+            contacts.append(Contact(lastname=last_name, firstname=first_name, id=id))
         return contacts
+
+
 
 

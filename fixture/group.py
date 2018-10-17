@@ -48,7 +48,7 @@ class GroupHelper:
         wd = self.app.wd
         self.open_groups_page()
         # Select first group
-        #self.select_first_group()
+        self.select_first_group()
         # Open modification form
         wd.find_element_by_name("edit").click()
         self.fill_group_form(new_group_data)

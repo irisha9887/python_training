@@ -18,7 +18,8 @@ def test_modify_contact(app):
                                bday="10", bmonth="April", byear="1998", aday="19", amonth="December", ayear="1999", address2="123 Main str, 40 apr, San Carlos",
                                phone2="385263354", notes="New changed notes!")
     contact.id = old_contacts[index].id
-    app.contact.modify_contact_by_index(index, contact)
+    app.contact.modify_contact_by_index(contact, index)
+    app.navigation.open_home_page()
     assert len(old_contacts) == app.contact.count()
     new_contacts = app.contact.get_contact_list()
     old_contacts[index] = contact

@@ -14,26 +14,23 @@ def test_add_contact(app):
                                phone2="987654321", notes="Have a good day! Well done!")
     app.contact.create(contact)
     app.navigation.open_home_page()
+    assert len(old_contacts) + 1 == app.contact.count()
     new_contacts = app.contact.get_contact_list()
-    assert len(old_contacts) + 1 == len(new_contacts)
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
 
-def test_add_empty_contact(app):
-    app.navigation.open_home_page()
-    old_contacts = app.contact.get_contact_list()
-    app.navigation.open_edit_page()
-    contact = Contact(firstname="", middlename="", lastname="", nickname="", photo="/Users/i.mamutkina/Desktop/photo.png",
-            title="", company="", address="",
-            home="", mobile="", work="", fax="", email="", email2="", email3="", homepage="", bday="", bmonth="May",
-            byear="", aday="",
-            amonth="June", ayear="", address2="", phone2="", notes="")
-    app.contact.create(contact)
-    app.navigation.open_home_page()
-    new_contacts = app.contact.get_contact_list()
-    assert len(old_contacts) + 1 == len(new_contacts)
-    old_contacts.append(contact)
-    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+#def test_add_empty_contact(app):
+#    app.navigation.open_home_page()
+#    old_contacts = app.contact.get_contact_list()
+#    app.navigation.open_edit_page()
+#    contact = Contact(firstname="", middlename="", lastname="", nickname="", photo="/Users/i.mamutkina/Desktop/photo.png", title="", company="", address="", home="", mobile="", work="",
+#                               fax="", email="", email2="", email3="", homepage="", bday="", bmonth="May", byear="", aday="", amonth="June", ayear="", address2="", phone2="", notes="")
+#    app.contact.create(contact)
+#    app.navigation.open_home_page()
+#    new_contacts = app.contact.get_contact_list()
+#    assert len(old_contacts) + 1 == app.contact.count()
+#    old_contacts.append(contact)
+#   assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
 

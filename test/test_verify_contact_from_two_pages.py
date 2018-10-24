@@ -12,7 +12,6 @@ def test_verify_contact_from_two_pages(app):
                                fax="fax-123-456-789", email="kate1@gmail.com", email2="kate2@gmail.com", email3="kate3@gmail.com", homepage="Test homepage",
                                bday="12", bmonth="May", byear="1990", aday="17", amonth="June", ayear="1995", address2="10 Main str, 8 apr, Fremont",
                                phone2="987654321", notes="Have a good day! Well done!"))
-    #all_contacts = app.contact.get_contact_list()
     index = randrange(len(app.contact.get_contact_list()))
     contact_from_home_page = app.contact.get_contact_list()[index]
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
@@ -24,20 +23,20 @@ def test_verify_contact_from_two_pages(app):
 
 
 def clear(s):
-   return re.sub("[() -]", "", s)
+    return re.sub("[() -]", "", s)
 
 
 def merge_phones_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
                             map(lambda x: clear(x),
-                                    filter(lambda x: x is not None,
+                                filter(lambda x: x is not None,
                                            [contact.home, contact.mobile, contact.work, contact.phone2]))))
 
 
 def merge_emails_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
                             map(lambda x: clear(x),
-                                    filter(lambda x: x is not None,
+                                filter(lambda x: x is not None,
                                            [contact.email, contact.email2, contact.email3]))))
 
 

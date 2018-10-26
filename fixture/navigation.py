@@ -1,3 +1,5 @@
+from fixture.application import Application
+
 class NavigationHelper:
 
     def __init__(self, app):
@@ -5,7 +7,7 @@ class NavigationHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        wd.get("http://localhost/addressbook/index.php")
+        wd.get(self.base_url)
 
     def open_edit_page(self):
         wd = self.app.wd

@@ -7,7 +7,7 @@ class NavigationHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        wd.get(self.base_url)
+        wd.get(self.app.base_url)
 
     def open_edit_page(self):
         wd = self.app.wd

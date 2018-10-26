@@ -7,7 +7,7 @@ import calendar
 
 
 def random_strings_for_text_fields(prefix, maxlen):
-    symbols = string.ascii_letters + string.digits + string.punctuation + " "*5
+    symbols = string.ascii_letters + string.digits + " "*5
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
 

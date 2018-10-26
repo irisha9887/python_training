@@ -1,4 +1,4 @@
-from fixture.application import Application
+import conftest
 
 class NavigationHelper:
 

@@ -4,7 +4,6 @@
     <list default="true" id="5418f789-2b0b-46bd-87d3-403bc8328e58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/navigation.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/navigation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,25 +51,25 @@
         <counts>
           <entry key="dummy" value="6" />
           <entry key="md" value="38" />
-          <entry key="py" value="12594" />
-          <entry key="txt" value="1200" />
+          <entry key="py" value="12652" />
+          <entry key="txt" value="1237" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="38" />
-          <entry key="PLAIN_TEXT" value="1206" />
-          <entry key="Python" value="12594" />
+          <entry key="PLAIN_TEXT" value="1243" />
+          <entry key="Python" value="12652" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="57">
               <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -82,11 +81,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="171">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1540533501720" expanded="true" signature="768:773" ph="..." />
+                <marker date="1540539110571" expanded="true" signature="794:799" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/navigation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -158,15 +157,15 @@
         <option value="$PROJECT_DIR$/model/group.py" />
         <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/test/test_add_contact.py" />
-        <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/fixture/navigation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="397" />
-    <option name="y" value="40" />
+    <option name="x" value="335" />
+    <option name="y" value="69" />
     <option name="width" value="785" />
     <option name="height" value="701" />
   </component>
@@ -238,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,7 +299,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;--browser\u003dchrome&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
@@ -321,16 +320,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.contact" />
       <item itemvalue="Python tests.pytest for test_verify_contact_from_two_pages.test_verify_contact_from_two_pages" />
       <item itemvalue="Python tests.pytest in test_verify_contact_from_two_pages.py" />
       <item itemvalue="Python tests.pytest in test_add_contact.py" />
       <item itemvalue="Python tests.pytest in test_add_group.py" />
-      <item itemvalue="Python.contact" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python.contact" />
         <item itemvalue="Python tests.pytest in test_verify_contact_from_two_pages.py" />
         <item itemvalue="Python tests.pytest for test_verify_contact_from_two_pages.test_verify_contact_from_two_pages" />
@@ -677,16 +676,17 @@
       <option name="project" value="LOCAL" />
       <updated>1540456059940</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Try to create options for terminal">
+      <created>1540534187618</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1540534187618</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_contact_py - 2018.10.25 at 00h 07m 13s.xml">
-      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact_py - 2018.10.25 at 00h 08m 56s.xml">
-      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_add_contact_py - 2018.10.25 at 00h 25m 14s.xml">
       <configuration name="pytest in test_add_contact.py" configurationId="tests" />
     </history-entry>
@@ -711,6 +711,12 @@
     <history-entry file="pytest_in_test_add_contact_py - 2018.10.25 at 01h 35m 21s.xml">
       <configuration name="pytest in test_add_contact.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2018.10.26 at 00h 25m 59s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2018.10.26 at 00h 34m 03s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -730,7 +736,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881662" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5162659" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.427157" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39745402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -738,7 +744,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286004" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935154" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.27157003" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32764506" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -783,7 +789,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GroupHelper class was created&#10;ContactHelper class was created&#10;NavigationHelper class was created&#10;SessionHelper class was created" />
     <MESSAGE value="Order of called methods was changed" />
     <MESSAGE value="Fixture is common for all test in file conftest.py" />
     <MESSAGE value="Test_delete_contact was added" />
@@ -808,7 +813,8 @@
     <MESSAGE value="Delete and modify random contact/group" />
     <MESSAGE value=" Test that verifies that for some one randomly selected contact the information on the main page (in the table) corresponds to the information presented in the contact editing form (where all its properties are set), while all the presented properties should be checked - first name, last name, address, phone numbers, email addresses is implemented" />
     <MESSAGE value="test_add_contact and test_add_group were parameterized" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_add_contact and test_add_group were parameterized" />
+    <MESSAGE value="Try to create options for terminal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to create options for terminal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1021,13 +1027,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="171">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1540533501720" expanded="true" signature="768:773" ph="..." />
+            <marker date="1540539110571" expanded="true" signature="794:799" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1036,16 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

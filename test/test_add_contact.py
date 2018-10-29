@@ -12,7 +12,7 @@ def random_strings_for_text_fields(prefix, maxlen):
 
 
 def random_strings_for_phones(maxlen):
-    symbols = string.digits + "(" + ")" + "+" + "-" + " "
+    symbols = string.digits + "(" + ")" + "+" + "-"
     return "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
 

@@ -1,6 +1,7 @@
 from model.contact import Contact
 from random import randrange
 
+
 def test_modify_contact(app):
     app.navigation.open_home_page()
     if app.contact.count() == 0:

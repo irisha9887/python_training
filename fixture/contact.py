@@ -154,14 +154,33 @@ class ContactHelper:
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
 
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[id='%s']" % id).click()
+
     def delete_contact_by_index(self,index):
         wd = self.app.wd
         # Select some contact
-        wd.find_elements_by_name("selected[]")[index].click()
+        self.select_contact_by_index(index)
         # Submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        # Select some contact
+        self.select_contact_by_id(id)
+        # Submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache = None
+
+
 
     def count(self):
         wd = self.app.wd
@@ -176,15 +195,16 @@ class ContactHelper:
             self.contact_cache = []
             for element in wd.find_elements_by_name("entry"):
                 cell_list = element.find_elements_by_tag_name("td")
+                id = element.find_element_by_name("selected[]").get_attribute("id")
                 last_name = cell_list[1].text
                 first_name = cell_list[2].text
                 address = cell_list[3].text
                 all_emails = cell_list[4].text
                 all_phones = cell_list[5].text
-                id = element.find_element_by_name("selected[]").get_attribute("value")
-                self.contact_cache.append(Contact(lastname=last_name, firstname=first_name, address=address,
-                                                 all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones,
-                                                 id=id,))
+                #self.contact_cache.append(Contact(lastname=last_name, firstname=first_name, address=address,
+                                                 #all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones, id=id))
+                self.contact_cache.append(Contact(id=id, firstname=first_name, lastname=last_name, address=address))
+
         return list(self.contact_cache)
 
 

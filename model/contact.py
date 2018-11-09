@@ -42,13 +42,13 @@ class Contact:
                                                                                           self.ayear, self.address2, self.phone2, self.notes)
 
     def __eq__(self, other):
-        return (self.id is None or other.id is None or self.id == other.id) and self.lastname == other.lastname and self.firstname == other.firstname and self.address == other.address
-                # and self.nickname == other.nickname and self.title == other.title and self.company == other.company and\
-                #self.home == other.home and self.mobile == other.mobile and self.work == other.work and self.fax == other.fax and self.email == other.email and\
-                #self.email2 == other.email2 and self.email3 == other.email3 and self.homepage == other.homepage and self.bday == other.bday and\
-                #self.bmonth == other.bmonth and self.byear == other.byear and self.byear == other.byear and self.aday == other.aday and\
-                #self.amonth == other.amonth and self.ayear == other.ayear and self.address2 == other.address2 and self.phone2 == other.phone2 and \
-                #self.notes == other.notes
+        return (self.id is None or other.id is None or self.id == other.id) and self.lastname == other.lastname and self.firstname == other.firstname and\
+                self.address == other.address and self.nickname == other.nickname and self.title == other.title and self.company == other.company and\
+                self.home == other.home and self.mobile == other.mobile and self.work == other.work and self.fax == other.fax and self.email == other.email and\
+                self.email2 == other.email2 and self.email3 == other.email3 and self.homepage == other.homepage and self.bday == other.bday and\
+                self.bmonth == other.bmonth and self.byear == other.byear and self.byear == other.byear and self.aday == other.aday and\
+                self.amonth == other.amonth and self.ayear == other.ayear and self.address2 == other.address2 and self.phone2 == other.phone2 and \
+                self.notes == other.notes
 
     def id_or_max(self):
         if self.id:

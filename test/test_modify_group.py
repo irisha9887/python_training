@@ -25,7 +25,7 @@ def test_modify_group_name(app, db, check_ui):
     old_groups = db.get_group_list()
     #id = random.choice(old_groups)
     index = randrange(len(old_groups))
-    group = Group(name="New group name")
+    group = Group(name="New group name", header="Modified header", footer="Modified footer")
     group.id = old_groups[index].id
     app.group.modify_group_by_id(group.id, group)
     new_groups = db.get_group_list()

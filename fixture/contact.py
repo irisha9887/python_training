@@ -202,9 +202,9 @@ class ContactHelper:
                 address = cell_list[3].text
                 all_emails = cell_list[4].text
                 all_phones = cell_list[5].text
-                #self.contact_cache.append(Contact(lastname=last_name, firstname=first_name, address=address,
-                                                 #all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones, id=id))
-                self.contact_cache.append(Contact(id=id, firstname=first_name, lastname=last_name, address=address))
+                self.contact_cache.append(Contact(lastname=last_name, firstname=first_name, address=address,
+                                                 all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones, id=id))
+                #self.contact_cache.append(Contact(id=id, firstname=first_name, lastname=last_name, address=address))
 
         return list(self.contact_cache)
 

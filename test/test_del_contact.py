@@ -30,4 +30,3 @@ def test_delete_some_contact(app, db, check_ui):
 
 
 
-

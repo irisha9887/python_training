@@ -2,6 +2,7 @@ from selenium.webdriver.support.ui import Select
 from model.contact import Contact
 import re
 
+
 class ContactHelper:
 
     def __init__(self, app):

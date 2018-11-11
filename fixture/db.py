@@ -74,7 +74,8 @@ class DbFixture:
             for row in cursor:
                 (id, firstname, middlename, lastname, nickname, title, company, address, home, mobile, work, fax, email, email2, email3,
                  homepage, bday, bmonth, byear, aday, amonth, ayear, address2, phone2, notes) = row
-                list.append(Contact(id=str(id), firstname=firstname, middlename=middlename, lastname=lastname, address=address, all_phones=home + mobile + work + phone2, all_emails=email+email2+email3))
+                list.append(Contact(id=str(id), firstname=firstname, middlename=middlename, lastname=lastname, address=address,
+                                    all_phones_from_home_page=home + mobile + work + phone2, all_emails_from_home_page=email+email2+email3))
         finally:
             cursor.close()
         return list

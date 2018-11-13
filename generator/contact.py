@@ -56,7 +56,7 @@ def random_photo_from_list():
 
 testdata = [Contact(firstname="", middlename="", lastname="", nickname="", photo=random_photo_from_list(),
     title="", company="", address="", home="", mobile="", work="", fax="", email="", email2="",
-    email3="", homepage="", bday="", bmonth="May", byear="", aday="", amonth="June", ayear="",
+    email3="", homepage="", bday="6", bmonth="May", byear="", aday="5", amonth="June", ayear="",
     address2="", phone2="",notes="")] + [Contact(firstname=random_strings_for_text_fields("name", 20),
     middlename=random_strings_for_text_fields("middlename", 20), lastname=random_strings_for_text_fields("lastname", 20),
     nickname=random_strings_for_text_fields("nick", 30), photo=random_photo_from_list(),
@@ -68,7 +68,7 @@ testdata = [Contact(firstname="", middlename="", lastname="", nickname="", photo
     homepage=random_strings_for_text_fields("Homepage", 40),bday=random_day_of_month(), bmonth=random_month(),
     byear=random_strings_for_year_field(), aday=random_day_of_month(), amonth=random_month(),
     ayear=random_strings_for_year_field(), address2=random_strings_for_text_fields("address2", 35),
-    phone2=random_strings_for_phones(300), notes=random_strings_for_text_fields("notes", 70))
+    phone2=random_strings_for_phones(30), notes=random_strings_for_text_fields("notes", 70))
     for name in range(n)
 ]
 

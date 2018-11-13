@@ -1,8 +1,9 @@
 from model.contact import Contact
 from random import randrange
+import random
 
 
-def test_modify_contact(app):
+def test_modify_contact(app, db, check_ui):
     app.navigation.open_home_page()
     if app.contact.count() == 0:
         app.navigation.open_edit_page()
@@ -11,7 +12,8 @@ def test_modify_contact(app):
                                fax="fax-123-456-789", email="kate1@gmail.com", email2="kate2@gmail.com", email3="kate3@gmail.com", homepage="Test homepage",
                                bday="12", bmonth="May", byear="1990", aday="17", amonth="June", ayear="1995", address2="10 Main str, 8 apr, Fremont",
                                phone2="987654321", notes="Have a good day! Well done!"))
-    old_contacts = app.contact.get_contact_list()
+    app.navigation.open_home_page()
+    old_contacts = db.get_contact_list()
     index = randrange(len(old_contacts))
     contact = Contact(firstname="Ekaterina", middlename="E.Smithes", lastname="Smithes", nickname="Cat", photo="/Users/i.mamutkina/Desktop/photo.png", title="Manager",
                                company="Facebook", address="13 Main str, 9 apr, SF", home="1122334455", mobile="33221166554", work="99887744556",
@@ -19,12 +21,18 @@ def test_modify_contact(app):
                                bday="10", bmonth="April", byear="1998", aday="19", amonth="December", ayear="1999", address2="123 Main str, 40 apr, San Carlos",
                                phone2="385263354", notes="New changed notes!")
     contact.id = old_contacts[index].id
-    app.contact.modify_contact_by_index(contact, index)
+    #contact = random.choice(old_contacts)
+    app.contact.modify_contact_by_id(contact.id, contact)
     app.navigation.open_home_page()
-    assert len(old_contacts) == app.contact.count()
-    new_contacts = app.contact.get_contact_list()
+    new_contacts = db.get_contact_list()
+    assert len(old_contacts) == len(new_contacts)
+    new_contacts = db.get_contact_list()
     old_contacts[index] = contact
-    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    assert old_contacts == new_contacts
+    #if check_ui:
+        #contact_list = db.get_contact_list_with_merged_emails_and_phones()
+        #assert sorted(contact_list, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
+
 
 
 

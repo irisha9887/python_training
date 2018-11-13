@@ -11,22 +11,15 @@ def test_delete_some_contact(app, db, check_ui):
                                fax="fax-123-456-789", email="kate1@gmail.com", email2="kate2@gmail.com", email3="kate3@gmail.com", homepage="Test homepage",
                                bday="12", bmonth="May", byear="1990", aday="17", amonth="June", ayear="1995", address2="10 Main str, 8 apr, Fremont",
                                phone2="987654321", notes="Have a good day! Well done!"))
+    app.navigation.open_home_page()
     old_contacts = db.get_contact_list()
     contact = random.choice(old_contacts)
-    #index = randrange(len(old_contacts))
     app.contact.delete_contact_by_id(contact.id)
     app.navigation.open_home_page()
-    #assert len(old_contacts) - 1 == app.contact.count()
     new_contacts = db.get_contact_list()
     assert len(old_contacts) - 1 == len(new_contacts)
     old_contacts.remove(contact)
-    #new_contacts = app.contact.get_contact_list()
-    #old_contacts[index:index+1] = []
     assert old_contacts == new_contacts
-    #if check_ui:
-        #assert sorted(new_contacts, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
-
-
-
-
-
+    if check_ui:
+        contact_list = db.get_contact_list_with_merged_emails_and_phones()
+        assert sorted(contact_list, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(), key=Contact.id_or_max)

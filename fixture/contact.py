@@ -109,6 +109,16 @@ class ContactHelper:
         wd.find_element_by_name("update").click()
         self.contact_cache = None
 
+    def modify_contact_by_id(self, id, contact):
+        wd = self.app.wd
+        # Get list of all elements and select the right element
+        self.select_contact_by_id(id)
+        # Fill contact form with new values
+        self.fill_primary_fields_for_contact(contact)
+        self.fill_secondary_fields_for_contact(contact)
+        wd.find_element_by_name("update").click()
+        self.contact_cache = None
+
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
         self.app.navigation.open_home_page()
@@ -163,7 +173,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("input[id='%s']" % id).click()
 
-    def delete_contact_by_index(self,index):
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         # Select some contact
         self.select_contact_by_index(index)
@@ -204,8 +214,6 @@ class ContactHelper:
                 all_phones = cell_list[5].text
                 self.contact_cache.append(Contact(lastname=last_name, firstname=first_name, address=address,
                                                  all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones, id=id))
-                #self.contact_cache.append(Contact(id=id, firstname=first_name, lastname=last_name, address=address))
-
         return list(self.contact_cache)
 
 

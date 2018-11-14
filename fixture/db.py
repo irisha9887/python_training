@@ -41,7 +41,6 @@ class DbFixture:
     def destroy(self):
         self.connection.close()
 
-
     def get_contact_list(self):
         list = []
         cursor = self.connection.cursor()
@@ -64,8 +63,6 @@ class DbFixture:
         return list
 
     def get_contact_list_with_merged_emails_and_phones(self):
-        self.get_contact_list()
-
         list = []
         cursor = self.connection.cursor()
         try:

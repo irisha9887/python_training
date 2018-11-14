@@ -112,7 +112,7 @@ class ContactHelper:
     def modify_contact_by_id(self, id, contact):
         wd = self.app.wd
         # Get list of all elements and select the right element
-        wd.find_element_by_css_selector("a[href='edit.php?id = %s']" % id).click()
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
         # Fill contact form with new values
         self.fill_primary_fields_for_contact(contact)
         self.fill_secondary_fields_for_contact(contact)

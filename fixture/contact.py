@@ -112,11 +112,11 @@ class ContactHelper:
     def modify_contact_by_id(self, id, contact):
         wd = self.app.wd
         # Get list of all elements and select the right element
-        self.select_contact_by_id(id)
+        wd.find_element_by_css_selector("a[href='edit.php?id = %s']" % id).click()
         # Fill contact form with new values
         self.fill_primary_fields_for_contact(contact)
         self.fill_secondary_fields_for_contact(contact)
-        wd.find_element_by_name("update").click()
+        wd.find_element_by_xpath("//input[22]").click()
         self.contact_cache = None
 
     def open_contact_to_edit_by_index(self, index):
@@ -190,8 +190,6 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
-
-
 
     def count(self):
         wd = self.app.wd

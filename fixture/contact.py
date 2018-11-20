@@ -1,7 +1,9 @@
 from selenium.webdriver.support.ui import Select
 from model.contact import Contact
 import re
-
+from random import randrange
+import random
+from model.group import Group
 
 class ContactHelper:
 
@@ -95,6 +97,38 @@ class ContactHelper:
         self.fill_secondary_fields_for_contact(contact)
         wd.find_element_by_xpath("//input[21]").click()
         self.contact_cache = None
+
+    def add_group_to_contact(self, contact, db):
+        wd = self.app.wd
+        self.app.navigation.open_edit_page()
+        # Create contact and fill all fields include group
+        self.fill_primary_fields_for_contact(contact)
+        wd.find_element_by_name("new_group").click()
+        group_list = db.get_group_list()
+        selected_group = random.choice(group_list)
+        Select(wd.find_element_by_name("new_group")).select_by_visible_text(selected_group.name)
+        self.fill_secondary_fields_for_contact(contact)
+        wd.find_element_by_xpath("//input[21]").click()
+        self.contact_cache = None
+
+
+    def delete_group_from_contact(self, orm):
+        wd = self.app.wd
+        selected_group = self.open_group_page_with_its_contact(orm)
+        contact_list = orm.get_contacts_in_group(selected_group)
+        index = randrange(len(contact_list))
+        self.select_contact_by_index(index)
+        wd.find_element_by_name("remove").click()
+
+
+    def open_group_page_with_its_contact(self, orm):
+        wd = self.app.wd
+        self.app.navigation.open_home_page()
+        wd.find_element_by_name("group").click()
+        group_list = orm.get_group_list()
+        selected_group = random.choice(group_list)
+        Select(wd.find_element_by_name("group")).select_by_visible_text(selected_group.name)
+        return selected_group
 
     def modify_first_contact(self):
         self.modify_contact_by_index(0)

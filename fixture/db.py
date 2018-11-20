@@ -16,11 +16,8 @@ class DbFixture:
         cursor = self.connection.cursor()
         try:
             cursor.execute("select group_id, group_name, group_header, group_footer from group_list")
-            #cursor.execute("select  group_id, group_name from group_list")
             for row in cursor:
-                #(id, name) = row
                 (id, name, header, footer) = row
-                #list.append(Group(id=str(id), name=name))
                 list.append(Group(id=str(id), name=name, header=header, footer=footer))
         finally:
             cursor.close()
@@ -75,6 +72,7 @@ class DbFixture:
         finally:
             cursor.close()
         return list
+
 
     def destroy(self):
         self.connection.close()

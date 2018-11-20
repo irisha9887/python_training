@@ -3,7 +3,7 @@ from sys import maxsize
 
 class Contact:
     def __init__(self, firstname=None, middlename=None, lastname=None, nickname=None, photo=None, title=None, company=None, address=None, home=None, mobile=None, work=None, fax=None, email=None, email2=None,
-                 email3=None, homepage=None, bday=None, bmonth=None, byear=None, aday=None, amonth=None, ayear=None, address2=None, phone2=None, notes=None, id=None, all_phones_from_home_page=None, all_emails_from_home_page=None):
+                 email3=None, homepage=None, bday=None, bmonth=None, byear=None, aday=None, amonth=None, ayear=None, new_group=None, address2=None, phone2=None, notes=None, id=None, all_phones_from_home_page=None, all_emails_from_home_page=None):
         self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname
@@ -26,6 +26,7 @@ class Contact:
         self.aday = aday
         self.amonth = amonth
         self.ayear = ayear
+        self.new_group = new_group
         self.address2 = address2
         self.phone2 = phone2
         self.notes = notes
@@ -48,9 +49,8 @@ class Contact:
                 self.photo == other.photo, self.home == other.home and self.mobile == other.mobile and\
                 self.work == other.work and self.fax == other.fax and self.email == other.email and self.email2 == other.email2 and\
                 self.email3 == other.email3 and self.homepage == other.homepage and self.bday == other.bday and\
-                self.bmonth == other.bmonth and self.byear == other.byear and self.aday == other.aday and\
-                self.amonth == other.amonth and self.ayear == other.ayear and self.address2 == other.address2 and\
-                self.phone2 == other.phone2 and self.notes == other.notes
+                self.bmonth == other.bmonth and self.byear == other.byear  and\
+                self.address2 == other.address2 and self.phone2 == other.phone2 and self.notes == other.notes
 
     def id_or_max(self):
         if self.id:

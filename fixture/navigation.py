@@ -14,3 +14,5 @@ class NavigationHelper:
         if not (wd.current_url.endswith("./edit.php")):
             wd.find_element_by_link_text("add new").click()
 
+
+

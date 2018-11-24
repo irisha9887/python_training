@@ -4,6 +4,8 @@ import re
 from random import randrange
 import random
 from model.group import Group
+from fixture.navigation import NavigationHelper
+
 
 class ContactHelper:
 
@@ -98,27 +100,49 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[21]").click()
         self.contact_cache = None
 
-    def add_group_to_contact(self, contact, db):
-        wd = self.app.wd
-        self.app.navigation.open_edit_page()
+    #def add_group_to_contact(self, contact, db):
+        #wd = self.app.wd
+        #self.app.navigation.open_edit_page()
         # Create contact and fill all fields include group
-        self.fill_primary_fields_for_contact(contact)
-        wd.find_element_by_name("new_group").click()
-        group_list = db.get_group_list()
-        selected_group = random.choice(group_list)
-        Select(wd.find_element_by_name("new_group")).select_by_visible_text(selected_group.name)
-        self.fill_secondary_fields_for_contact(contact)
-        wd.find_element_by_xpath("//input[21]").click()
-        self.contact_cache = None
+        #self.fill_primary_fields_for_contact(contact)
+        #wd.find_element_by_name("new_group").click()
+        #group_list = db.get_group_list()
+        #selected_group = random.choice(group_list)
+        #Select(wd.find_element_by_name("new_group")).select_by_visible_text(selected_group.name)
+        #self.fill_secondary_fields_for_contact(contact)
+        #wd.find_element_by_xpath("//input[21]").click()
+        #self.contact_cache = None
 
-
-    def delete_group_from_contact(self, orm):
+    def add_group_to_contact(self, id):
         wd = self.app.wd
-        selected_group = self.open_group_page_with_its_contact(orm)
-        contact_list = orm.get_contacts_in_group(selected_group)
-        index = randrange(len(contact_list))
-        self.select_contact_by_index(index)
+        self.select_contact_by_id(id)
+        wd.find_element_by_name("add").click()
+
+    def delete_group_from_contact(self, id):
+        wd = self.app.wd
+        # wd.get("a[href='index.php?group=%s']" % id)
+        wd.get("http://localhost/addressbook/index.php?group=")
+        wd.get("http://localhost/addressbook/index.php?group=306")
+        self.select_contact_by_id(id)
+        # wd.find_element_by_xpath("//input[@id='%s']" % id).click()
         wd.find_element_by_name("remove").click()
+
+        #wd.find_element_by_css_selector("input[id='%s']" % id).click()
+
+        #def test_click_on_checbox(self):
+        #    driver = self.driver
+        #wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+         #   driver.get("http://localhost/addressbook/index.php?group=306")
+          #  driver.find_element_by_xpath("//input[@id='602']").click()
+
+
+    #def delete_group_from_contact(self, orm):
+        #wd = self.app.wd
+        #selected_group = self.open_group_page_with_its_contact(orm)
+        #contact_list = orm.get_contacts_in_group(selected_group)
+        #index = randrange(len(contact_list))
+        #self.select_contact_by_index(index)
+        #wd.find_element_by_name("remove").click()
 
 
     def open_group_page_with_its_contact(self, orm):

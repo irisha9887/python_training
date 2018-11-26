@@ -121,8 +121,7 @@ class ContactHelper:
     def delete_group_from_contact(self, id):
         wd = self.app.wd
         # wd.get("a[href='index.php?group=%s']" % id)
-        wd.get("http://localhost/addressbook/index.php?group=")
-        wd.get("http://localhost/addressbook/index.php?group=306")
+        wd.get("http://localhost/addressbook/index.php?group=619")
         self.select_contact_by_id(id)
         # wd.find_element_by_xpath("//input[@id='%s']" % id).click()
         wd.find_element_by_name("remove").click()

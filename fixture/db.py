@@ -53,7 +53,7 @@ class DbFixture:
                                     nickname=nickname, photo=photo, title=title, company=company, address=address,
                                     home=home, mobile=mobile, work=work, fax=fax, email=email, email2=email2,
                                     email3=email3, homepage=homepage, bday=str(bday), bmonth=bmonth, byear=byear,
-                                    aday=str(aday), amonth=amonth, ayear=ayear, address2=address, phone2=phone2,
+                                    aday=str(aday), amonth=amonth, ayear=ayear, address2=address2, phone2=phone2,
                                     notes=notes))
         finally:
             cursor.close()
@@ -69,6 +69,8 @@ class DbFixture:
                 list.append(Contact(id=str(id), firstname=firstname, lastname=lastname, address=address,
                                     all_phones_from_home_page=home + mobile + work + phone2,
                                     all_emails_from_home_page=email + email2 + email3))
+
+
         finally:
             cursor.close()
         return list

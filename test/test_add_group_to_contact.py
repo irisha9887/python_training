@@ -45,7 +45,7 @@ def test_add_group_to_contact(app, orm):
     #if len(db.get_group_list()) == 0:
         #app.group.create(Group(name="Group for adding contact"))
     #contact = json_contacts
-    #app.contact.open_group_page_with_its_contact(orm)
+    app.contact.open_group_page_with_its_contact(orm)
     #selected_group = app.contact.open_group_page_with_its_contact(orm)
     #old_contacts_from_group_page = orm.get_contacts_in_group(selected_group)
     #app.contact.add_group_to_contact(contact, db)

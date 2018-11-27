@@ -118,13 +118,14 @@ class ContactHelper:
         self.select_contact_by_id(id)
         wd.find_element_by_name("add").click()
 
-    def delete_group_from_contact(self, id):
+    def delete_group_from_contact(self, selected_group, selected_contact):
         wd = self.app.wd
-        # wd.get("a[href='index.php?group=%s']" % id)
-        wd.get("http://localhost/addressbook/index.php?group=619")
-        self.select_contact_by_id(id)
+        self.app.navigation.open_home_page()
+        wd.get("a[href='index.php?group=%s']" % selected_group.id)
+        self.select_contact_by_id(selected_contact.id)
         # wd.find_element_by_xpath("//input[@id='%s']" % id).click()
         wd.find_element_by_name("remove").click()
+
 
         #wd.find_element_by_css_selector("input[id='%s']" % id).click()
 

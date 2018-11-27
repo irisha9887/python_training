@@ -4,20 +4,15 @@ import random
 
 
 def test_delete_group_from_contact(app, orm):
-    # Get group list from DB
-    group_list = orm.get_group_list()
     # If group list is empty, then add new group
-    if len(group_list) == 0:
+    if len(orm.get_group_list()) == 0:
         app.group.open_groups_page()
         app.group.create(Group(name="Group for adding contact"))
     # Get again group list because it could be changed after if conditions
-    new_group_list = orm.get_group_list()
+    group_list = orm.get_group_list()
     # Get contact list from random selected group
-    selected_group = random.choice(new_group_list)
-    contacts_in_group = orm.get_contacts_in_group(selected_group)
-    # Get count of contacts which are inside selected group
-    count_contacts_in_group_before_deleting_contact = len(contacts_in_group)
-    if len(contacts_in_group) == 0:
+    selected_group = random.choice(group_list)
+    if len(orm.get_contacts_in_group(selected_group)) == 0:
         app.navigation.open_edit_page()
         app.contact.create(
             Contact(firstname="Ekaterina", middlename="E.Smithes", lastname="Smithes", nickname="Cat",
@@ -29,9 +24,20 @@ def test_delete_group_from_contact(app, orm):
                     bday="10", bmonth="April", byear="1998", aday="19", amonth="December", ayear="1999",
                     address2="123 Main str, 40 apr, San Carlos",
                     phone2="385263354", notes="New changed notes!"))
-    new_contact_list = orm.get_contacts_in_group(selected_group)
+    contact_list = orm.get_contacts_in_group(selected_group)
+    if len(contact_list) == 0:
+        selected_contact = random.choice(orm.get_contacts_not_in_group())
+        app.contact.select_contact_by_id(selected_contact.id)
+
+        app.contact.add_group_to_contact(selected_contact.id)
+    # Get count of contacts which are inside selected group
+    count_contacts_in_group_before_deleting_contact = len(contact_list)
     # Choose one random contact from this list
-    selected_contact = random.choice(new_contact_list)
-    app.contact.delete_group_from_contact(selected_contact.id)
+    contact_list = orm.get_contacts_in_group(selected_group)
+    selected_contact = random.choice(contact_list)
+    app.contact.delete_group_from_contact(selected_contact.id, selected_group.id)
+
+
+
 
 

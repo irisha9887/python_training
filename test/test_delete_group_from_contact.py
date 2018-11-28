@@ -26,15 +26,15 @@ def test_delete_group_from_contact(app, orm):
                     phone2="385263354", notes="New changed notes!"))
     contact_list = orm.get_contacts_in_group(selected_group)
     if len(contact_list) == 0:
-        selected_contact = random.choice(orm.get_contacts_not_in_group())
+        app.navigation.open_home_page()
+        selected_contact = random.choice(orm.get_contact_list())
         app.contact.select_contact_by_id(selected_contact.id)
-
         app.contact.add_group_to_contact(selected_contact.id)
     # Get count of contacts which are inside selected group
     count_contacts_in_group_before_deleting_contact = len(contact_list)
     # Choose one random contact from this list
-    contact_list = orm.get_contacts_in_group(selected_group)
     selected_contact = random.choice(contact_list)
+    app.contact.open_group_page_with_contacts(selected_group.id)
     app.contact.delete_group_from_contact(selected_contact.id, selected_group.id)
 
 

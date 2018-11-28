@@ -120,8 +120,7 @@ class ContactHelper:
 
     def delete_group_from_contact(self, selected_group, selected_contact):
         wd = self.app.wd
-        self.app.navigation.open_home_page()
-        wd.get("a[href='index.php?group=%s']" % selected_group.id)
+        self.open_group_page_with_contacts(selected_group)
         self.select_contact_by_id(selected_contact.id)
         # wd.find_element_by_xpath("//input[@id='%s']" % id).click()
         wd.find_element_by_name("remove").click()
@@ -135,6 +134,10 @@ class ContactHelper:
          #   driver.get("http://localhost/addressbook/index.php?group=306")
           #  driver.find_element_by_xpath("//input[@id='602']").click()
 
+    def open_group_page_with_contacts(self, selected_group):
+        wd = self.app.wd
+        self.app.navigation.open_home_page()
+        wd.get("a[href='index.php?group=%s']" % selected_group.id)
 
     #def delete_group_from_contact(self, orm):
         #wd = self.app.wd

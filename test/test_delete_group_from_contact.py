@@ -27,7 +27,8 @@ def test_delete_group_from_contact(app, orm):
     contact_list = orm.get_contacts_in_group(selected_group)
     if len(contact_list) == 0:
         app.navigation.open_home_page()
-        if len(orm.get_contact_list) == 0:
+        if len(orm.get_contact_list()) == 0:
+            app.navigation.open_edit_page()
             app.contact.create(
                 Contact(firstname="Ekaterina", middlename="E.Smithes", lastname="Smithes", nickname="Cat",
                         photo="/Users/i.mamutkina/Desktop/photo.png", title="Manager",

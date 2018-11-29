@@ -27,6 +27,17 @@ def test_delete_group_from_contact(app, orm):
     contact_list = orm.get_contacts_in_group(selected_group)
     if len(contact_list) == 0:
         app.navigation.open_home_page()
+        if len(orm.get_contact_list) == 0:
+            app.contact.create(
+                Contact(firstname="Ekaterina", middlename="E.Smithes", lastname="Smithes", nickname="Cat",
+                        photo="/Users/i.mamutkina/Desktop/photo.png", title="Manager",
+                        company="Facebook", address="13 Main str, 9 apr, SF", home="1122334455", mobile="33221166554",
+                        work="99887744556",
+                        fax="fax-745-126-789", email="cat_1@gmail.com", email2="cat_2@gmail.com",
+                        email3="cat_3@gmail.com", homepage="Changed homepage",
+                        bday="10", bmonth="April", byear="1998", aday="19", amonth="December", ayear="1999",
+                        address2="123 Main str, 40 apr, San Carlos",
+                        phone2="385263354", notes="New changed notes!"))
         selected_contact = random.choice(orm.get_contact_list())
         app.contact.select_contact_by_id(selected_contact.id)
         app.contact.add_group_to_contact(selected_contact.id)
@@ -38,6 +49,9 @@ def test_delete_group_from_contact(app, orm):
     #ind = mylist.index(mycontact)
     contact_index = contact_list.index(selected_contact)
     app.contact.delete_group_from_contact(selected_group.name, contact_index)
+    ontact_list = orm.get_contacts_in_group(selected_group)
+    count_contacts_in_group_after_deleting_contact = len(contact_list)
+    assert count_contacts_in_group_before_deleting_contact - 1 == count_contacts_in_group_after_deleting_contact
 
 
 

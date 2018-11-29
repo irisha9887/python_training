@@ -118,26 +118,21 @@ class ContactHelper:
         self.select_contact_by_id(id)
         wd.find_element_by_name("add").click()
 
-    def delete_group_from_contact(self, selected_group, selected_contact):
+    def delete_group_from_contact(self, selected_group_name, selected_contact_id):
         wd = self.app.wd
-        self.open_group_page_with_contacts(selected_group)
-        self.select_contact_by_id(selected_contact.id)
+        self.open_group_page_with_contacts(selected_group_name)
+        self.select_contact_by_id(selected_contact_id)
         # wd.find_element_by_xpath("//input[@id='%s']" % id).click()
         wd.find_element_by_name("remove").click()
 
 
-        #wd.find_element_by_css_selector("input[id='%s']" % id).click()
-
-        #def test_click_on_checbox(self):
-        #    driver = self.driver
-        #wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
-         #   driver.get("http://localhost/addressbook/index.php?group=306")
-          #  driver.find_element_by_xpath("//input[@id='602']").click()
-
-    def open_group_page_with_contacts(self, selected_group):
+    def open_group_page_with_contacts(self, selected_group_name):
         wd = self.app.wd
         self.app.navigation.open_home_page()
-        wd.get("a[href='index.php?group=%s']" % selected_group.id)
+        wd.find_element_by_name("group").click()
+        Select(wd.find_element_by_name("group")).select_by_visible_text(selected_group_name)
+        #wd.get("http://localhost/addressbook/index.php?group=%s']" % selected_group_id)
+        #wd.get("index.php?group=%s']" % selected_group_id)
 
     #def delete_group_from_contact(self, orm):
         #wd = self.app.wd

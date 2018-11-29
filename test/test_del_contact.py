@@ -1,6 +1,7 @@
 from model.contact import Contact
 import random
 import pytest
+import allure
 
 def test_delete_some_contact(app, db, check_ui):
     app.navigation.open_home_page()
@@ -12,15 +13,15 @@ def test_delete_some_contact(app, db, check_ui):
                                bday="12", bmonth="May", byear="1990", aday="17", amonth="June", ayear="1995", address2="10 Main str, 8 apr, Fremont",
                                phone2="987654321", notes="Have a good day! Well done!"))
     app.navigation.open_home_page()
-    with pytest.allure.step('Given a non-empty contact list'):
+    with allure.step('Given a non-empty contact list'):
         old_contacts = db.get_contact_list()
-    with pytest.allure.step('Given a random contact from the list'):
+    with allure.step('Given a random contact from the list'):
         contact = random.choice(old_contacts)
-    with pytest.allure.step('When I delete the contact %s from the list' % contact.id):
+    with allure.step('When I delete the contact %s from the list' % contact.id):
         app.contact.delete_contact_by_id(contact.id)
         app.navigation.open_home_page()
         new_contacts = db.get_contact_list()
-    with pytest.allure.step('Then the new contact list is equal to the old contact list without the deleted contact'):
+    with allure.step('Then the new contact list is equal to the old contact list without the deleted contact'):
         assert len(old_contacts) - 1 == len(new_contacts)
         old_contacts.remove(contact)
         assert old_contacts == new_contacts

@@ -1,7 +1,7 @@
 from model.contact import Contact
 from random import randrange
 import random
-import pytest
+import allure
 
 def test_modify_contact(app, db, check_ui):
     app.navigation.open_home_page()
@@ -13,9 +13,9 @@ def test_modify_contact(app, db, check_ui):
                                bday="12", bmonth="May", byear="1990", aday="17", amonth="June", ayear="1995", address2="10 Main str, 8 apr, Fremont",
                                phone2="987654321", notes="Have a good day! Well done!"))
     app.navigation.open_home_page()
-    with pytest.allure.step('Given a non-empty contact list'):
+    with allure.step('Given a non-empty contact list'):
         old_contacts = db.get_contact_list()
-    with pytest.allure.step('Given a random contact from the list'):
+    with allure.step('Given a random contact from the list'):
         index = randrange(len(old_contacts))
         contact = Contact(firstname="Ekaterina", middlename="E.Smithes", lastname="Smithes", nickname="Cat", photo="/Users/i.mamutkina/Desktop/photo.png", title="Manager",
                                company="Facebook", address="13 Main str, 9 apr, SF", home="1122334455", mobile="33221166554", work="99887744556",
@@ -24,11 +24,11 @@ def test_modify_contact(app, db, check_ui):
                                phone2="385263354", notes="New changed notes!")
     contact.id = old_contacts[index].id
     #contact = random.choice(old_contacts)
-    with pytest.allure.step('When I modify the contact %s from the list' % contact.id):
+    with allure.step('When I modify the contact %s from the list' % contact.id):
         app.contact.modify_contact_by_id(contact.id, contact)
     app.navigation.open_home_page()
     new_contacts = db.get_contact_list()
-    with pytest.allure.step('Then the new contact list is equal to the old contact list'):
+    with allure.step('Then the new contact list is equal to the old contact list'):
         assert len(old_contacts) == len(new_contacts)
         new_contacts = db.get_contact_list()
         old_contacts[index] = contact

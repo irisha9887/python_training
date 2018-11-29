@@ -61,7 +61,7 @@
           <entry key="feature" value="1520" />
           <entry key="json" value="175" />
           <entry key="md" value="38" />
-          <entry key="py" value="29289" />
+          <entry key="py" value="29290" />
           <entry key="txt" value="1757" />
         </counts>
       </usages-collector>
@@ -71,7 +71,7 @@
           <entry key="JSON" value="175" />
           <entry key="Markdown" value="38" />
           <entry key="PLAIN_TEXT" value="1782" />
-          <entry key="Python" value="29289" />
+          <entry key="Python" value="29290" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_delete_group_from_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="141">
+              <caret line="39" column="68" lean-forward="true" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -486,13 +486,6 @@
       <option name="presentableId" value="Default" />
       <updated>1537935436182</updated>
     </task>
-    <task id="LOCAL-00030" summary="Login and logout methods were modified">
-      <created>1538936083581</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1538936083581</updated>
-    </task>
     <task id="LOCAL-00031" summary="All test were modified, they check that one group/contact exist for deleting or modifying">
       <created>1538947827152</created>
       <option name="number" value="00031" />
@@ -829,22 +822,17 @@
       <option name="project" value="LOCAL" />
       <updated>1543483321536</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Try to create test: delete_contact_from_group">
+      <created>1543485715789</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1543485715791</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 30m 13s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 34m 42s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 35m 28s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 36m 29s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 42m 21s.xml">
       <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
     </history-entry>
@@ -861,6 +849,18 @@
       <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
     </history-entry>
     <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 55m 38s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 59m 23s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 02h 00m 39s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 02h 13m 12s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 02h 17m 33s.xml">
       <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -882,7 +882,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41442716" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3125884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45534408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1365,8 +1365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_delete_group_from_contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="141">
+          <caret line="39" column="68" lean-forward="true" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

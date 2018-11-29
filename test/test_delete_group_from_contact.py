@@ -49,6 +49,7 @@ def test_delete_group_from_contact(app, orm):
     app.contact.open_group_page_with_contacts(selected_group.name)
     contact_index = contact_list.index(selected_contact)
     app.contact.delete_group_from_contact(selected_group.name, contact_index)
+    app.navigation.open_home_page()
     contact_list = orm.get_contacts_in_group(selected_group)
     count_contacts_in_group_after_deleting_contact = len(contact_list)
     assert count_contacts_in_group_before_deleting_contact - 1 == count_contacts_in_group_after_deleting_contact

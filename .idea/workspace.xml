@@ -61,7 +61,7 @@
           <entry key="feature" value="1520" />
           <entry key="json" value="175" />
           <entry key="md" value="38" />
-          <entry key="py" value="29290" />
+          <entry key="py" value="29293" />
           <entry key="txt" value="1757" />
         </counts>
       </usages-collector>
@@ -71,7 +71,7 @@
           <entry key="JSON" value="175" />
           <entry key="Markdown" value="38" />
           <entry key="PLAIN_TEXT" value="1782" />
-          <entry key="Python" value="29290" />
+          <entry key="Python" value="29293" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_delete_group_from_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="39" column="68" lean-forward="true" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+            <state relative-caret-position="482">
+              <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -228,8 +228,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="-1920" />
+    <option name="y" value="-185" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -485,13 +487,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537935436182</updated>
-    </task>
-    <task id="LOCAL-00031" summary="All test were modified, they check that one group/contact exist for deleting or modifying">
-      <created>1538947827152</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1538947827152</updated>
     </task>
     <task id="LOCAL-00032" summary="Some methods were modified (task 10)">
       <created>1538978582156</created>
@@ -829,19 +824,17 @@
       <option name="project" value="LOCAL" />
       <updated>1543485715791</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Try to create test: delete_contact_from_group">
+      <created>1543487006540</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1543487006540</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 42m 21s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 49m 58s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 50m 54s.xml">
-      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 01h 53m 09s.xml">
       <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
     </history-entry>
@@ -863,6 +856,15 @@
     <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 02h 17m 33s.xml">
       <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 02h 30m 57s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 21h 31m 33s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_delete_group_from_contact_py - 2018.11.29 at 21h 32m 53s.xml">
+      <configuration name="pytest in test_delete_group_from_contact.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -874,7 +876,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="-1920" y="-185" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.6241722" />
@@ -882,7 +884,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3125884" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31555155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45534408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1365,8 +1367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_delete_group_from_contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="39" column="68" lean-forward="true" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+        <state relative-caret-position="482">
+          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

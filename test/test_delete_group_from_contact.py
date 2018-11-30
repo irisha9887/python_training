@@ -45,6 +45,7 @@ def test_delete_group_from_contact(app, orm):
     # Get count of contacts which are inside selected group
     count_contacts_in_group_before_deleting_contact = len(contact_list)
     # Choose one random contact from this list
+    app.navigation.open_home_page()
     selected_contact = random.choice(contact_list)
     app.contact.open_group_page_with_contacts(selected_group.name)
     contact_index = contact_list.index(selected_contact)

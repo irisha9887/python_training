@@ -1,7 +1,6 @@
 from model.contact import Contact
 from model.group import Group
 import random
-from random import randrange
 import allure
 
 
@@ -42,22 +41,11 @@ def test_add_group_to_contact(app, orm):
     #Get a count of contacts after adding contact to group
     new_contacts = orm.get_contacts_in_group(selected_group)
     count_contacts_in_group_after_adding_contact = len(new_contacts)
-    with allure.step('Then the new contact list is equal to the old list with the added group to one random contact'):
+    with allure.step('Then the count of contacts in group before adding of contact'
+                     'is equal count of contacts in group after adding of contact'):
         assert count_contacts_in_group_before_adding_contact + 1 == count_contacts_in_group_after_adding_contact
 
 
-#def test_add_group_to_contact(app, db, json_contacts, orm):
-    #app.group.open_groups_page()
-    #if len(db.get_group_list()) == 0:
-        #app.group.create(Group(name="Group for adding contact"))
-    #contact = json_contacts
-    app.contact.open_group_page_with_its_contact(orm)
-    #selected_group = app.contact.open_group_page_with_its_contact(orm)
-    #old_contacts_from_group_page = orm.get_contacts_in_group(selected_group)
-    #app.contact.add_group_to_contact(contact, db)
-    #app.contact.open_group_page_with_its_contact(orm)
-    #new_contacts_from_group_page = orm.get_contacts_in_group(selected_group)
-    #assert len(old_contacts_from_group_page) + 1 == len(new_contacts_from_group_page)
 
 
 

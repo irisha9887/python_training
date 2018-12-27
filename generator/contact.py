@@ -50,8 +50,10 @@ def random_day_of_month():
 
 
 def random_photo_from_list():
-    list_of_photo = ["/Users/i.mamutkina/Desktop/photo1.png", "/Users/i.mamutkina/Desktop/photo2.png", "/Users/i.mamutkina/Desktop/photo3.png"]
-    return random.choice(list_of_photo)
+    list_of_photo = ["photo1.png", "photo2.png", "photo3.png"]
+    chosen_photo_path = random.choice(list_of_photo)
+    photo_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), chosen_photo_path)
+    return photo_file
 
 
 testdata = [Contact(firstname="", middlename="", lastname="", nickname="", photo=random_photo_from_list(),
